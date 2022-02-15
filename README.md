@@ -19,7 +19,7 @@ Keshi will then searches for a `keshi.default.js` with tasks, if it doesn't exis
 ### Default tasks
 
 ```js
-export default {
+module.exports = {
   tasks: {
     laravel: 'php artisan serve',
     vue: 'yarn dev',
