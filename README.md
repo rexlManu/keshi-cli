@@ -16,10 +16,31 @@ For starting everything you just need to run the command `keshi`.
 
 Keshi will then searches for a `keshi.default.js` with tasks, if it doesn't exist, the default built in commands will be used.
 
-### Default tasks
+### Commands
+
+`keshi` - Just starts all tasks concurrently
+
+`keshi -p <name>` - Start all tasks from the preset
+
+`keshi init` - Create default config file
+
+`keshi create` - Create a new preset
+
+`keshi list` - List available presets
+
+`keshi delete <name>` - Delete a preset
+
+`keshi --help` - Overview of all commands with options
+
+`keshi --version` - See version
+
+### Config
+
+The default looks like this if you generate it with `keshi init`.
 
 ```js
 module.exports = {
+  preset: '',
   tasks: {
     laravel: 'php artisan serve',
     vue: 'yarn dev',
@@ -27,9 +48,11 @@ module.exports = {
 };
 ```
 
-### Running the command
+You can set preset to a name of one of your presets.
 
-`keshi`
+## Presets
+
+Your presets are saved in your user home in `.keshirc` or `.keshirc.json`.
 
 ## Goal
 

@@ -1,18 +1,30 @@
 import { spawn } from 'child_process';
 import chalk from 'chalk';
+import { preset as loadPreset } from './presets.js';
 
 const runningTasks = [];
 
-export async function run(config) {
+export async function run(argv, config) {
+  const preset = argv.preset
+    ? loadPreset(argv.preset)
+    : config.preset || config.preset == ''
+    ? loadPreset(config.preset)
+    : config;
+  if (!preset) {
+    return;
+  }
+
   // check if tasks are empty
-  if (config.tasks.length === 0) {
+  if (preset.tasks.length === 0) {
     console.log(chalk.red('No tasks found in keshi.config.js'));
     process.exit(1);
   }
+  // print tasks
+  console.log(chalk.green(`Tasks: ${Object.values(preset.tasks).join(', ')}`));
 
   // spawn a new process for each task and add them to the runningTasks array
-  Object.keys(config.tasks).forEach((taskName) => {
-    const task = config.tasks[taskName];
+  Object.keys(preset.tasks).forEach((taskName) => {
+    const task = preset.tasks[taskName];
     const taskProcess = spawn(task, {
       shell: true,
     });
@@ -31,7 +43,7 @@ export async function run(config) {
       // split data at newlines
       const lines = data.toString().split('\n');
       lines.forEach((line) => {
-        console.log(prefix + line);
+        console.log(prefix + chalk.red(line));
       });
     });
 
@@ -41,6 +53,7 @@ export async function run(config) {
       if (index > -1) {
         runningTasks.splice(index, 1);
       }
+      console.log(chalk.green(`Task ${taskName} ended`));
     });
   });
 
