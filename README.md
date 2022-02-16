@@ -54,6 +54,14 @@ You can set preset to a name of one of your presets.
 
 Your presets are saved in your user home in `.keshirc` or `.keshirc.json`.
 
+### Premade presets
+
+Premade presets for certain development environments.
+
+#### Laravel
+
+You can find a premade presets for laravel development [here](./presets/laravel-development.json).
+
 ## Goal
 
 I originally developed this tool for this purpose, so that I don't have to open multiple terminals each time when programming Laravel apps with VueJS.
