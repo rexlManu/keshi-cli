@@ -1,0 +1,28 @@
+{
+  "presets": {
+    "basic": {
+      "name": "basic",
+      "tasks": {
+        "backend": "php artisan serve",
+        "frontend": "yarn dev"
+      }
+    },
+    "extended": {
+      "name": "extended",
+      "tasks": {
+        "backend": "php artisan serve",
+        "frontend": "yarn dev",
+        "queue": "php artisan queue:listen"
+      }
+    },
+    "additional": {
+      "name": "additional",
+      "tasks": {
+        "backend": "php artisan serve",
+        "frontend": "yarn dev",
+        "queue": "php artisan queue:listen",
+        "soketi": "soketi start"
+      }
+    }
+  }
+}
