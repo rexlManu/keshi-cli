@@ -1,5 +1,8 @@
 # keshi
 
+<span class="badge-npmversion"><a href="https://npmjs.org/package/keshi-cli" title="View this project on NPM"><img src="https://img.shields.io/npm/v/keshi-cli.svg" alt="NPM version" /></a></span>
+<span class="badge-npmdownloads"><a href="https://npmjs.org/package/keshi-cli" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/keshi-cli.svg" alt="NPM downloads" /></a></span>
+
 A simple CLI for running commands concurrently.
 
 Made for laravel but works with everything.
