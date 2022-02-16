@@ -4,6 +4,8 @@ A simple CLI for running commands concurrently.
 
 Made for laravel but works with everything.
 
+<img src="./.github/preview/showcase.gif" />
+
 ## Installation
 
 `yarn global add keshi-cli`
