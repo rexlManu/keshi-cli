@@ -14,17 +14,17 @@ Made for laravel but works with everything.
 
 ## Usage
 
-For starting everything you just need to run the command `keshi`.
+To start everything you just need to run the command `keshi`.
 
-Keshi will then searches for a `keshi.default.js` with tasks, if it doesn't exist, the default built in commands will be used.
+Keshi will then search for a `keshi.default.js` with tasks, if it doesn't exist, the default built in commands will be used.
 
 ### Commands
 
-`keshi` - Just starts all tasks concurrently
+`keshi` - Start all tasks concurrently
 
 `keshi -p <name>` - Start all tasks from the preset
 
-`keshi init` - Create default config file
+`keshi init` - Create the default config file
 
 `keshi create` - Create a new preset
 
@@ -32,9 +32,9 @@ Keshi will then searches for a `keshi.default.js` with tasks, if it doesn't exis
 
 `keshi delete <name>` - Delete a preset
 
-`keshi --help` - Overview of all commands with options
+`keshi --help`
 
-`keshi --version` - See version
+`keshi --version`
 
 ### Config
 
@@ -50,11 +50,11 @@ module.exports = {
 };
 ```
 
-You can set preset to a name of one of your presets.
+You can set 'preset' to one of your presets
 
 ## Presets
 
-Your presets are saved in your user home in `.keshirc` or `.keshirc.json`.
+Your presets are saved in your user home directory under `.keshirc` or `.keshirc.json`.
 
 ### Premade presets
 
@@ -62,11 +62,11 @@ Premade presets for certain development environments.
 
 #### Laravel
 
-You can find a premade presets for laravel development [here](./presets/laravel-development.json).
+You can find premade presets for laravel development [here](./presets/laravel-development.json).
 
 ## Goal
 
-I originally developed this tool for this purpose, so that I don't have to open multiple terminals each time when programming Laravel apps with VueJS.
+I originally developed this tool for the purpose, so that I don't have to open multiple terminals at once when programming Laravel apps with VueJS.
 
 ## Security
 
