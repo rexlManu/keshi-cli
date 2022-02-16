@@ -14,7 +14,7 @@ Made for laravel but works with everything.
 
 ## Usage
 
-To start everything you just need to run the command `keshi`.
+To start everything, you just need to run the command `keshi`.
 
 Keshi will then search for a `keshi.default.js` with tasks, if it doesn't exist, the default built in commands will be used.
 
