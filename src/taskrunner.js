@@ -7,9 +7,10 @@ const runningTasks = [];
 export async function run(argv, config) {
   const preset = argv.preset
     ? loadPreset(argv.preset)
-    : config.preset || config.preset == ''
+    : config.preset && config.preset != ''
     ? loadPreset(config.preset)
     : config;
+
   if (!preset) {
     return;
   }
